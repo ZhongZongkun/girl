@@ -23,8 +23,8 @@ public class ExceptionHandle {
             return ResultUtil.error(girlException.getCode(), girlException.getMessage());
         } else {
             logger.error("系统异常:{}", e);
-            return ResultUtil.error(ResultEnum.UNKONW_ERROR.getCode(),
-                    ResultEnum.UNKONW_ERROR.getMsg());
+            return ResultUtil.error(ResultEnum.UNKNOWN_ERROR.getCode(),
+                    ResultEnum.UNKNOWN_ERROR.getMsg());
         }
     }
 

@@ -1,5 +1,7 @@
 package com.imooc.entity;
 
+import java.util.List;
+
 public class Result<T> {
 
     /** 错误码 */
@@ -34,4 +36,5 @@ public class Result<T> {
     public void setData(T data) {
         this.data = data;
     }
+
 }

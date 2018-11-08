@@ -27,9 +27,9 @@ public class GirlController {
 
 
     @GetMapping("/girls")
-    public List<Girl> girlList() {
+    public Result<List<Girl>> girlList() {
         logger.info("girl list");
-        return girlRepository.findAll();
+        return ResultUtil.success(girlRepository.findAll());
     }
 
     @PostMapping(value = "/girls")
@@ -46,8 +46,8 @@ public class GirlController {
     }
 
     @GetMapping("/girl/{id}")
-    public Girl getGirl(@PathVariable("id") Integer id) {
-        return girlRepository.findOne(id);
+    public Result<Girl> getGirl(@PathVariable("id") Integer id) {
+        return ResultUtil.success(girlRepository.findOne(id));
     }
 
     @PutMapping("/girl/{id}")
@@ -68,8 +68,8 @@ public class GirlController {
     }
 
     @GetMapping("/girls/age/{age}")
-    public List<Girl> girlListByAge(@PathVariable("age") Integer age) {
-        return girlRepository.findByAge(age);
+    public Result<List<Girl>> girlListByAge(@PathVariable("age") Integer age) {
+        return ResultUtil.success(girlRepository.findByAge(age));
     }
 
     //@DeleteMapping("/girl/{id}")

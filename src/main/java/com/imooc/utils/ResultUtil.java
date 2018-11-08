@@ -3,6 +3,8 @@ package com.imooc.utils;
 import com.imooc.entity.Result;
 import com.imooc.enums.ResultEnum;
 
+import java.util.List;
+
 public class ResultUtil {
 
     public static Result success(Object object){
@@ -13,6 +15,7 @@ public class ResultUtil {
 
         return result;
     }
+
 
     public static Result success(){
         return success(null);

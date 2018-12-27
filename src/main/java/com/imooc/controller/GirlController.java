@@ -26,7 +26,7 @@ public class GirlController {
     private GirlService girlService;
 
 
-    @GetMapping("/girls")
+    @GetMapping(value = "/girls")
     public Result<List<Girl>> girlList() {
         logger.info("girl list");
         return ResultUtil.success(girlRepository.findAll());

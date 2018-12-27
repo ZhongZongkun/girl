@@ -22,7 +22,7 @@ public class ExceptionHandle {
             GirlException girlException = (GirlException) e;
             return ResultUtil.error(girlException.getCode(), girlException.getMessage());
         } else {
-            logger.error("系统异常:{}", e);
+            logger.error("系统异常:{}", e.getMessage());
             return ResultUtil.error(ResultEnum.UNKNOWN_ERROR.getCode(),
                     ResultEnum.UNKNOWN_ERROR.getMsg());
         }
